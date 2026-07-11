@@ -55,8 +55,8 @@ add_tensor_out(KernelRuntimeContext& ctx, ArrayRef<Tensor> a, Tensor& out) {
 
 Tensor& add_optional_scalar_out(
     KernelRuntimeContext& ctx,
-    optional<int64_t> s1,
-    optional<int64_t> s2,
+    std::optional<int64_t> s1,
+    std::optional<int64_t> s2,
     Tensor& out) {
   (void)ctx;
   if (s1.has_value()) {
@@ -70,7 +70,7 @@ Tensor& add_optional_scalar_out(
 
 Tensor& add_optional_tensor_out(
     KernelRuntimeContext& ctx,
-    ArrayRef<optional<Tensor>> a,
+    ArrayRef<std::optional<Tensor>> a,
     Tensor& out) {
   (void)ctx;
   for (int i = 0; i < a.size(); i++) {
@@ -183,10 +183,10 @@ TEST_F(MakeBoxedFromUnboxedFunctorTest, UnboxOptionalArrayRef) {
 
   // prepare optional tensors.
   torch::executor::testing::TensorFactory<ScalarType::Int> tf;
-  optional<Tensor> storage[2];
+  std::optional<Tensor> storage[2];
   EValue evalues[2] = {EValue(tf.ones({5})), EValue()};
   EValue* values_p[2] = {&evalues[0], &evalues[1]};
-  BoxedEvalueList<optional<Tensor>> a_box(values_p, storage, 2);
+  BoxedEvalueList<std::optional<Tensor>> a_box(values_p, storage, 2);
   EValue boxed_array_ref(&a_box);
 
   // prepare out tensor.

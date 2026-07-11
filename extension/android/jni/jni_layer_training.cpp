@@ -338,7 +338,7 @@ class SGDHybrid : public facebook::jni::HybridClass<SGDHybrid> {
   friend HybridBase;
   std::unique_ptr<optimizer::SGD> sgdOptimizer_;
   std::vector<std::string>
-      parameterNames_; // Store parameter names to keep string_view valid
+      parameterNames_; // Store parameter names to keep std::string_view valid
   std::vector<TensorPtr>
       paramTensorPtrs_; // Store parameter tensors to keep TensorPtrs valid.
 };

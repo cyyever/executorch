@@ -57,7 +57,7 @@ namespace ET_MERGED_DATA_MAP_NAMESPACE {
 }
 
 ET_NODISCARD Result<const TensorLayout> MergedDataMap::get_tensor_layout(
-    string_view key) const {
+    std::string_view key) const {
   const auto it = key_to_map_index_.find(key.data());
   if (it == key_to_map_index_.end()) {
     ET_LOG(Debug, "Key %s not found in named data maps.", key.data());
@@ -67,7 +67,7 @@ ET_NODISCARD Result<const TensorLayout> MergedDataMap::get_tensor_layout(
 }
 
 ET_NODISCARD
-Result<FreeableBuffer> MergedDataMap::get_data(string_view key) const {
+Result<FreeableBuffer> MergedDataMap::get_data(std::string_view key) const {
   const auto it = key_to_map_index_.find(key.data());
   if (it == key_to_map_index_.end()) {
     ET_LOG(Debug, "Key %s not found in named data maps.", key.data());
@@ -77,7 +77,7 @@ Result<FreeableBuffer> MergedDataMap::get_data(string_view key) const {
 }
 
 ET_NODISCARD Error MergedDataMap::load_data_into(
-    string_view key,
+    std::string_view key,
     void* buffer,
     size_t size) const {
   const auto it = key_to_map_index_.find(key.data());

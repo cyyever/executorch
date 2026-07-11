@@ -582,7 +582,7 @@ void expect_list_optional_tensor_output(
       &values[4],
   };
   // Memory that BoxedEvalueList will use to assemble a contiguous array of
-  // optional<Tensor> entries. It's important not to destroy these entries,
+  // std::optional<Tensor> entries. It's important not to destroy these entries,
   // because the values list will own the underlying Tensors.
   auto unwrapped_values_memory = std::make_unique<uint8_t[]>(
       sizeof(std::optional<executorch::aten::Tensor>) * wrapped_values.size());
