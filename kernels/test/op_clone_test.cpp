@@ -27,7 +27,7 @@ class OpCloneTest : public OperatorTest {
  protected:
   Tensor& op_clone_out(
       const Tensor& self,
-      optional<MemoryFormat> memory_format,
+      std::optional<MemoryFormat> memory_format,
       Tensor& out) {
     return torch::executor::aten::clone_outf(
         context_, self, memory_format, out);
@@ -42,7 +42,7 @@ class OpCloneTest : public OperatorTest {
     Tensor out_contiguous = tf.zeros(/*sizes=*/{2, 4});
 
     // we only support contiguous memory, the memory type shall be either
-    // nullopt or MemoryFormat::Contiguous.
+    // std::nullopt or MemoryFormat::Contiguous.
     Tensor out_nullopt_ret = op_clone_out(
         /*self=*/input,
         /*memory_format=*/executorch::aten::nullopt,
@@ -111,7 +111,7 @@ TEST_F(OpCloneTest, MismatchedTypesDie) {
       op_clone_out(input, /*memory_format=*/executorch::aten::nullopt, out));
 }
 
-// Only contiguous memory is supported, the memory type other than nullopt or
+// Only contiguous memory is supported, the memory type other than std::nullopt or
 // MemoryFormat::Contiguous should not be allowed. The function is expected
 // depth if using the illegal memory format.
 TEST_F(OpCloneTest, MismatchedMemoryFormatDie) {

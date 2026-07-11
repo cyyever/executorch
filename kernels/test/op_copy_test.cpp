@@ -45,7 +45,7 @@ class OpCopyTest : public OperatorTest {
     Tensor out_contiguous = tf.zeros(/*sizes=*/{2, 4});
 
     // we only support contiguous memory, the memory type shall be either
-    // nullopt or MemoryFormat::Contiguous.
+    // std::nullopt or MemoryFormat::Contiguous.
     Tensor out_nullopt_ret = op_copy_out(
         /*self=*/self,
         /*src=*/src,
@@ -227,7 +227,7 @@ TEST_F(OpCopyTest, MismatchedSrcOutTypesDie) {
   ET_EXPECT_KERNEL_FAILURE(context_, op_copy_out(self, src, non_blocking, out));
 }
 
-// Only contiguous memory is supported, the memory type other than nullopt or
+// Only contiguous memory is supported, the memory type other than std::nullopt or
 // MemoryFormat::Contiguous should not be allowed. The function is expected
 // depth if using the illegal memory format.
 TEST_F(OpCopyTest, BlockingDie) {

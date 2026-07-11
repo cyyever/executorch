@@ -42,7 +42,7 @@ Tensor& clone_out(
       context, tensors_have_same_dim_order(self, out), InvalidArgument, out);
 
   // Right now we only focus on contiguous memory, memory_format shall always
-  // either a nullopt or exec::aten::MemoryFormat::Contiguous
+  // either a std::nullopt or exec::aten::MemoryFormat::Contiguous
   ET_KERNEL_CHECK(
       context,
       !memory_format.has_value() ||
