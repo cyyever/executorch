@@ -520,7 +520,7 @@ struct EValue {
       : tag(Tag::ListOptionalTensor) {
     ET_CHECK_MSG(
         t != nullptr,
-        "BoxedEvalueList<optional<Tensor>> pointer cannot be null");
+        "BoxedEvalueList<std::optional<Tensor>> pointer cannot be null");
     payload.copyable_union.as_list_optional_tensor_ptr = t;
   }
 

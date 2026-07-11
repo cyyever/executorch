@@ -642,7 +642,7 @@ Error Method::parse_values(const NamedDataMap* external_data_map) {
                 ->items();
         ET_CHECK_OR_RETURN_ERROR(
             items != nullptr, InvalidProgram, "Missing list at index %zu", i);
-        // Same as TensorList but optional<Tensor> instead of Tensor
+        // Same as TensorList but std::optional<Tensor> instead of Tensor
         auto tensors =
             deserialization::parseListOptionalType<executorch::aten::Tensor>(
                 items,

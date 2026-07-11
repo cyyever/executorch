@@ -255,7 +255,7 @@ TEST_F(EValueTest, BoxedEvalueListTryGetNullElement) {
 }
 
 TEST_F(EValueTest, BoxedEvalueListTryGetOptionalTensorNullIsNone) {
-  // For optional<Tensor>, null value is valid.
+  // For std::optional<Tensor>, null value is valid.
   EValue a;
   EValue* values_p[2] = {&a, nullptr};
   std::optional<executorch::aten::Tensor> storage[2];
