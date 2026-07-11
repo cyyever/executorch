@@ -23,7 +23,6 @@ namespace native {
 
 using Tensor = executorch::aten::Tensor;
 using ScalarType = executorch::aten::ScalarType;
-using string_view = std::string_view;
 
 namespace {
 

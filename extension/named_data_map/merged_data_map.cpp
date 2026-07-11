@@ -18,7 +18,6 @@ using executorch::runtime::Error;
 using executorch::runtime::FreeableBuffer;
 using executorch::runtime::Result;
 using executorch::runtime::Span;
-using std::string_view;
 
 namespace executorch::extension {
 namespace ET_MERGED_DATA_MAP_NAMESPACE {

@@ -27,7 +27,6 @@ using ::executorch::aten::Tensor;
 using ::executorch::runtime::canCast;
 using ::executorch::runtime::Error;
 using ::executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 namespace impl {
 namespace G3 {

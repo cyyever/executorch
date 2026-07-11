@@ -26,7 +26,6 @@ using ::executorch::aten::ScalarType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
 using ::impl::generic::kernels::quantize;
-using std::optional;
 
 template <typename T>
 void quantized_relu_per_tensor_out_(

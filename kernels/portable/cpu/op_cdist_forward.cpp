@@ -16,7 +16,6 @@ namespace executor {
 namespace native {
 
 using executorch::aten::Tensor;
-using std::optional;
 
 namespace {
 

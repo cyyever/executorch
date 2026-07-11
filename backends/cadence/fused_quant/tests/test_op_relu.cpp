@@ -17,7 +17,6 @@
 using executorch::aten::ScalarType;
 using executorch::aten::Tensor;
 using executorch::runtime::testing::TensorFactory;
-using std::optional;
 
 namespace {
 

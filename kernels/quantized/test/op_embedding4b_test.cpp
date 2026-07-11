@@ -20,7 +20,6 @@ using executorch::aten::ArrayRef;
 using executorch::aten::ScalarType;
 using executorch::aten::Tensor;
 using executorch::ET_RUNTIME_NAMESPACE::KernelRuntimeContext;
-using std::optional;
 using torch::executor::native::quantized_embedding_4bit_dtype_out;
 using torch::executor::native::quantized_embedding_4bit_out;
 

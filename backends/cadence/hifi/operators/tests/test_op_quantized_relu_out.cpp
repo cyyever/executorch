@@ -31,8 +31,6 @@ using ::executorch::runtime::Error;
 using ::executorch::runtime::KernelRuntimeContext;
 using ::executorch::runtime::runtime_init;
 using ::executorch::runtime::testing::TensorFactory;
-using std::optional;
-using std::string_view;
 
 class HiFiQuantizedReluTest : public OperatorTest {
  public:

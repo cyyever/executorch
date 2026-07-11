@@ -27,7 +27,6 @@ using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
 using ::impl::generic::kernels::dequantize;
 using ::impl::generic::kernels::quantize;
-using std::optional;
 
 DECLARE_POINTWISE_TENSOR_QUANTIZED_BINARY_OP(quantized_mul_, *);
 

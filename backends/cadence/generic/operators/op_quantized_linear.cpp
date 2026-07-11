@@ -22,7 +22,6 @@ using ::executorch::aten::ScalarType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
 using ::executorch::runtime::toString;
-using std::optional;
 
 Tensor& quantized_linear_out(
     ET_UNUSED KernelRuntimeContext& ctx,

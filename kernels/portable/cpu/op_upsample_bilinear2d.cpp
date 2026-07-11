@@ -16,7 +16,6 @@ namespace native {
 
 using executorch::aten::ArrayRef;
 using executorch::aten::SizesType;
-using std::optional;
 
 namespace {
 template <typename CTYPE>

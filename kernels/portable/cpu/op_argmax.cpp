@@ -20,7 +20,6 @@ namespace executor {
 namespace native {
 
 using executorch::aten::Tensor;
-using std::optional;
 
 Tensor& argmax_out(
     KernelRuntimeContext& ctx,

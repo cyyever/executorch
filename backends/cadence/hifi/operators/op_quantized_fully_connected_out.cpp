@@ -23,7 +23,6 @@ using ::executorch::aten::ScalarType;
 using ::executorch::aten::SizesType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 void inline _quantized_fully_connected_asym8u(
     const Tensor& in,

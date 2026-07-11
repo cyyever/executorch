@@ -17,7 +17,6 @@ using executorch::aten::RuntimeContext;
 using executorch::aten::ScalarType;
 using executorch::aten::Tensor;
 using executorch::runtime::ArrayRef;
-using std::optional;
 using torch::executor::Error;
 
 namespace impl {

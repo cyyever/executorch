@@ -23,7 +23,6 @@ using ::executorch::aten::Scalar;
 using ::executorch::aten::ScalarType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 #define ET_FORALL_CADENCE_QUANTIZED_TYPES(_) \
   _(uint8_t, Byte)                           \

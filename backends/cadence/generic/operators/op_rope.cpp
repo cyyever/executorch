@@ -13,7 +13,6 @@ namespace generic {
 namespace native {
 
 using ::executorch::aten::Tensor;
-using std::optional;
 
 Tensor& rope_out(
     ET_UNUSED ::executorch::runtime::KernelRuntimeContext& ctx,
@@ -76,7 +75,6 @@ namespace generic {
 namespace native {
 
 using ::executorch::aten::Tensor;
-using std::optional;
 
 Tensor& rope_rotate_stacked_halves_out(
     ET_UNUSED ::executorch::runtime::KernelRuntimeContext& ctx,

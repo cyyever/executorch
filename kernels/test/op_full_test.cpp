@@ -23,7 +23,6 @@ using executorch::aten::MemoryFormat;
 using executorch::aten::Scalar;
 using executorch::aten::ScalarType;
 using executorch::aten::Tensor;
-using std::optional;
 using torch::executor::testing::TensorFactory;
 
 class OpFullOutTest : public OperatorTest {

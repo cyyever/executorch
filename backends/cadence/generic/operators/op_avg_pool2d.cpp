@@ -23,7 +23,6 @@ using ::executorch::aten::ScalarType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::getLeadingDims;
 using ::executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 // Compute the avg_pool2d for in_data in NCHW layout. IT is the input datatype,
 // and AT is the accumulation datatype. 'quantized' is true when the input is

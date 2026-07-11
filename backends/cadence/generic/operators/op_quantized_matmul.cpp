@@ -26,7 +26,6 @@ using ::executorch::aten::ScalarType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
 using ::impl::generic::kernels::quantize;
-using std::optional;
 
 // The quantized matmul. The quantized matmul accumulates in a wider register,
 // whose type is TA.

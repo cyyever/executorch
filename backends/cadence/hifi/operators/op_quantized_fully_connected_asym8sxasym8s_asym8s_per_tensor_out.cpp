@@ -15,7 +15,6 @@ namespace native {
 
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 void quantized_fully_connected_asym8sxasym8s_asym8s_per_tensor_out(
     __ET_UNUSED KernelRuntimeContext& ctx,

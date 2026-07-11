@@ -19,7 +19,6 @@ namespace native {
 using executorch::aten::ScalarType;
 using executorch::aten::Tensor;
 using executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 namespace {
 

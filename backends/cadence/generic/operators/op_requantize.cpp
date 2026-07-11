@@ -25,7 +25,6 @@ using ::executorch::aten::Tensor;
 using ::executorch::runtime::KernelRuntimeContext;
 using ::impl::generic::kernels::dequantize;
 using ::impl::generic::kernels::quantize;
-using std::optional;
 
 // Requantize the int8_t/uint8_t input tensor to a uint8_t/int8_t out tensor.
 // The scale and zero_point for requantization are in the args.

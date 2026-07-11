@@ -24,7 +24,6 @@ using ::executorch::aten::ScalarType;
 using ::executorch::aten::Tensor;
 using ::executorch::runtime::getLeadingDims;
 using ::executorch::runtime::KernelRuntimeContext;
-using std::optional;
 
 // The nnlib kernel to compute quantized linear via matmul.
 
