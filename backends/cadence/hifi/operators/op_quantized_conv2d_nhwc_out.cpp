@@ -379,7 +379,7 @@ void xa_opt_quantized_conv2d_nhwc(
       output_zero_point,
       0, // out_multiplier (unused)
       0, // out_shift (unused)
-      optional<Tensor>(), // offset (unused)
+      std::optional<Tensor>(), // offset (unused)
       out);
 }
 
@@ -570,7 +570,7 @@ void quantized_conv2d_nhwc_per_tensor_out(
     int64_t output_zero_point,
     __ET_UNUSED int64_t out_multiplier,
     __ET_UNUSED int64_t out_shift,
-    const optional<Tensor>& offset,
+    const std::optional<Tensor>& offset,
     Tensor& out) {
   // Handle W8A16 heterogeneous type (int16_t activations, int8_t weights)
   if (out.scalar_type() == ::executorch::aten::ScalarType::Short &&

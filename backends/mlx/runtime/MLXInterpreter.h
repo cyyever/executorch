@@ -243,7 +243,7 @@ inline void exec_rope(const RopeNode& n, ExecutionState& st, StreamOrDevice s) {
   }
 
   // MLX requires exactly one of base or freqs — when freqs is provided,
-  // base must be nullopt.
+  // base must be std::nullopt.
   std::optional<float> base =
       freqs_arr ? std::nullopt : std::optional<float>(n.base);
 

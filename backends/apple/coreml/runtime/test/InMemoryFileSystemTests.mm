@@ -345,7 +345,7 @@ using namespace inmemoryfs;
         std::string fragment("{\"x\" : 1}xyz");
         ss << fragment;
         auto object = executorchcoreml::json::read_object_from_stream(ss);
-        XCTAssertTrue(object.has_value(), "There is a valid json object, `read_json_object` must not return nullopt");
+        XCTAssertTrue(object.has_value(), "There is a valid json object, `read_json_object` must not return std::nullopt");
         auto j = json::parse(object.value().begin(), object.value().end());
         XCTAssertEqual(j["x"], 1, "The value must match");
     }
@@ -355,7 +355,7 @@ using namespace inmemoryfs;
         std::string fragment("{\"x\" : 1");
         ss << fragment;
         auto object = executorchcoreml::json::read_object_from_stream(ss);
-        XCTAssertFalse(object.has_value(), "There is no closing brace, `read_json_object` must return nullopt");
+        XCTAssertFalse(object.has_value(), "There is no closing brace, `read_json_object` must return std::nullopt");
     }
 
 
@@ -364,7 +364,7 @@ using namespace inmemoryfs;
         std::string fragment("{\"x\" : \"\\\"1\"}xyz");
         ss << fragment;
         auto object = executorchcoreml::json::read_object_from_stream(ss);
-        XCTAssertTrue(object.has_value(), "There is a valid json object, `read_json_object` must not return nullopt");
+        XCTAssertTrue(object.has_value(), "There is a valid json object, `read_json_object` must not return std::nullopt");
         auto j = json::parse(object.value().begin(), object.value().end());
         std::string value = j["x"];
         XCTAssertEqual(value, std::string("\"1"), "The value must match");
@@ -375,7 +375,7 @@ using namespace inmemoryfs;
         std::string fragment("{sdhalskjks}");
         ss << fragment;
         auto object = executorchcoreml::json::read_object_from_stream(ss);
-        XCTAssertTrue(object.has_value(), "The json object is invalid but is correctly nested, `read_json_object` must not return nullopt");
+        XCTAssertTrue(object.has_value(), "The json object is invalid but is correctly nested, `read_json_object` must not return std::nullopt");
         std::exception_ptr eptr;
         try {
             auto j = json::parse(object.value().begin(), object.value().end());

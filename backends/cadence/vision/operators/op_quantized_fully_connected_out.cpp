@@ -28,7 +28,7 @@ void quantized_fully_connected_out(
     const Tensor& out_multiplier,
     const Tensor& out_shift,
     int64_t out_zero_point,
-    __ET_UNUSED const optional<Tensor>& offset,
+    __ET_UNUSED const std::optional<Tensor>& offset,
     Tensor& out) {
 #define typed_quantized_linear(ctype, dtype) \
   case ScalarType::dtype: {                  \
@@ -65,7 +65,7 @@ void quantized_fully_connected_per_tensor_out(
     int64_t out_multiplier,
     int64_t out_shift,
     int64_t out_zero_point,
-    __ET_UNUSED const optional<Tensor>& offset,
+    __ET_UNUSED const std::optional<Tensor>& offset,
     Tensor& out) {
 #define typed_quantized_linear(ctype, dtype) \
   case ScalarType::dtype: {                  \

@@ -272,7 +272,7 @@ MPSGraphBuilder::mps##aot_name##Op(NodePtr nodePtr)  {                          
   );                                                                                  \
                                                                                       \
   auto strView = graphNode->rounding_mode() != nullptr ?                              \
-    std::make_optional(graphNode->rounding_mode()->string_view()) : round_mode;       \
+    std::make_optional(graphNode->rounding_mode()->std::string_view()) : round_mode;       \
                                                                                       \
   _idToMPSGraphTensor[graphNode->output_id()] = divModeTemplate(                      \
     getMPSGraphTensor(graphNode->input1_id()),                                        \

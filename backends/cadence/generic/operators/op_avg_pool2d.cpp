@@ -37,7 +37,7 @@ void avg_pool2d_nchw(
     IntArrayRef stride,
     IntArrayRef padding,
     bool count_include_pad,
-    optional<int64_t> divisor_override,
+    std::optional<int64_t> divisor_override,
     int leading_dims,
     int ih,
     int iw,
@@ -99,8 +99,8 @@ Tensor& avg_pool2d_out(
     IntArrayRef padding,
     bool ceil_mode,
     bool count_include_pad,
-    optional<int64_t> divisor_override,
-    const optional<Tensor>& in_zero_point_t,
+    std::optional<int64_t> divisor_override,
+    const std::optional<Tensor>& in_zero_point_t,
     bool channel_last,
     Tensor& out) {
   ET_DCHECK_MSG(!channel_last, "NHWC layout for avg_pool2d not yet supported");

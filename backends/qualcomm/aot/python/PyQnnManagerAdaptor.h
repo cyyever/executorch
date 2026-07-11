@@ -194,7 +194,7 @@ class PyQnnManager {
   explicit PyQnnManager(const py::bytes& buffer)
       : qnn_executorch_option_ptr_(buffer),
         qnn_executorch_context_binary_(QNN_EXECUTORCH_CONTEXT_BINARY) {
-    // Choose non-allocating non-owning string pieces exposed as string_view for
+    // Choose non-allocating non-owning string pieces exposed as std::string_view for
     // parsers
     auto qnn_executorch_options = GetQnnExecuTorchOptions(
         qnn_executorch_option_ptr_.cast<std::string_view>().data());

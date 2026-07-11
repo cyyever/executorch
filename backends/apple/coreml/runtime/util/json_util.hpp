@@ -22,7 +22,7 @@ namespace json {
 ///
 /// @param stream  The stream to read from.
 /// @param max_bytes_to_read  The maximum bytes that can be read from the stream.
-/// @retval The json object string or `nullopt` if there is no json object in the stream.
+/// @retval The json object string or `std::nullopt` if there is no json object in the stream.
 std::optional<std::string> read_object_from_stream(std::istream& stream,
                                                    size_t max_bytes_to_read = 10 * 1024 * 1024);
 

@@ -157,7 +157,7 @@ public:
     }
     
     /// Returns the value for the specified key. If the key doesn't exists in the store or for some reason the operation failed
-    /// then `nullopt` is returned.
+    /// then `std::nullopt` is returned.
     ///
     /// @param key The key for which the value is retrieved.
     /// @param fn   The function that will be invoked with the retrieved value.
@@ -274,7 +274,7 @@ public:
     
     
     /// Returns the value for the specified key. If the key doesn't exists in the store or the operation failed
-    /// then `nullopt` is returned.
+    /// then `std::nullopt` is returned.
     ///
     /// @param key The key for which the value is retrieved.
     /// @param error   On failure, error is populated with the failure reason.

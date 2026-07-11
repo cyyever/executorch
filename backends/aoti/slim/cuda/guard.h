@@ -49,7 +49,7 @@ Result<cudaStream_t> getCurrentCUDAStream(DeviceIndex device_index = -1);
  * The CUDA stream registered for the specified device, or std::nullopt if none
  * is set. Unlike getCurrentCUDAStream, it never creates one, so it can snapshot
  * the current selection without side effects. Also returns std::nullopt if the
- * current device cannot be queried (device_index -1), so nullopt does not
+ * current device cannot be queried (device_index -1), so std::nullopt does not
  * distinguish "no stream set" from "device query failed".
  *
  * @param device_index The device index (-1 to use current device)

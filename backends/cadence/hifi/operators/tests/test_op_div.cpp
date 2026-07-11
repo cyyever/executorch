@@ -41,7 +41,7 @@ class HiFiDivTest : public OperatorTest {
   Tensor& div_out_mode(
       const Tensor& a,
       const Tensor& b,
-      optional<string_view> mode,
+      std::optional<std::string_view> mode,
       Tensor& out) {
     return ::impl::HiFi::native::div_out_mode(context_, a, b, mode, out);
   }

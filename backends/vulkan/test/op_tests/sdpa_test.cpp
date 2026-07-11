@@ -59,11 +59,11 @@ Tensor& sdpa_with_kv_cache_out_no_context(
     const int64_t seq_len,
     // @lint-ignore CLANGTIDY facebook-hte-ConstantArgumentPassByValue
     // @lint-ignore CLANGTIDY facebook-hte-ParameterMightThrowOnCopy
-    const optional<Tensor> attn_mask,
+    const std::optional<Tensor> attn_mask,
     const double dropout_p,
     const bool is_causal,
     // @lint-ignore CLANGTIDY facebook-hte-ParameterMightThrowOnCopy
-    const optional<double> scale,
+    const std::optional<double> scale,
     Tensor& output) {
   executorch::runtime::KernelRuntimeContext context{};
   return torch::executor::native::sdpa_with_kv_cache_out(

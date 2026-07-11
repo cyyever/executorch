@@ -83,7 +83,7 @@ bool isJsonReference(const void* data, size_t size) {
 ///
 /// @param data Pointer to the data (including magic number).
 /// @param size Size of the data.
-/// @return The parsed reference, or nullopt if parsing fails.
+/// @return The parsed reference, or std::nullopt if parsing fails.
 std::optional<NamedDataReference> parseNamedDataReference(const void* data, size_t size) {
     if (!isJsonReference(data, size)) {
         ET_LOG(Error, "Data does not start with JSON reference magic number");

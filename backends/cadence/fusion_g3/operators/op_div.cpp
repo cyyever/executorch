@@ -256,7 +256,7 @@ Tensor& div_out_mode(
     KernelRuntimeContext& ctx,
     const Tensor& a,
     const Tensor& b,
-    optional<string_view> mode,
+    std::optional<std::string_view> mode,
     Tensor& out) {
   ET_DCHECK_MSG(!tensor_has_zero(b), "divisor tensor contains zero");
 
@@ -583,7 +583,7 @@ Tensor& div_scalar_mode_out(
     KernelRuntimeContext& ctx,
     const Tensor& a,
     const Scalar& b,
-    optional<string_view> mode,
+    std::optional<std::string_view> mode,
     Tensor& out) {
   if (!mode.has_value()) {
     return div_scalar_out(ctx, a, b, out);

@@ -27,7 +27,7 @@ namespace native {
 int prepare_data(
     const Tensor& in,
     Tensor& out,
-    optional<ArrayRef<int64_t>> dim_list,
+    std::optional<ArrayRef<int64_t>> dim_list,
     int* inp_shape,
     int* out_shape,
     int* p_axis,
@@ -58,9 +58,9 @@ int prepare_data(
 Tensor& mean_out(
     RuntimeContext& ctx,
     const Tensor& in,
-    optional<ArrayRef<int64_t>> dim_list,
+    std::optional<ArrayRef<int64_t>> dim_list,
     bool keepdim,
-    optional<ScalarType> dtype,
+    std::optional<ScalarType> dtype,
     Tensor& out) {
   ET_KERNEL_CHECK(
       ctx,
@@ -170,9 +170,9 @@ Tensor& mean_out(
 Tensor& mean_dim_out(
     RuntimeContext& ctx,
     const Tensor& in,
-    optional<ArrayRef<int64_t>> dim_list,
+    std::optional<ArrayRef<int64_t>> dim_list,
     bool keepdim,
-    optional<ScalarType> dtype,
+    std::optional<ScalarType> dtype,
     Tensor& out) {
   return mean_out(ctx, in, dim_list, keepdim, dtype, out);
 }

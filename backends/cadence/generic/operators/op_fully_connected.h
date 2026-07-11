@@ -23,7 +23,7 @@ Tensor& fully_connected_out(
     KernelRuntimeContext& ctx,
     const Tensor& input,
     const Tensor& weight,
-    const optional<Tensor>& bias,
+    const std::optional<Tensor>& bias,
     Tensor& output);
 
 } // namespace native

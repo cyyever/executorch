@@ -136,7 +136,7 @@ inline std::vector<int64_t> infer_size(IntArrayRef shape, int64_t numel) {
 /// @param old_sizes Current tensor sizes.
 /// @param old_strides Current tensor strides.
 /// @param new_sizes Target tensor sizes.
-/// @return Strides for the view, or nullopt if copy is required.
+/// @return Strides for the view, or std::nullopt if copy is required.
 inline std::optional<std::vector<int64_t>> compute_stride(
     IntArrayRef old_sizes,
     IntArrayRef old_strides,
